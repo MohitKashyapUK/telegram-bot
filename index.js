@@ -1,4 +1,4 @@
-=// variables
+// variables
 const express = require("express"),
 fs = require("node:fs"),
 app = express(),
