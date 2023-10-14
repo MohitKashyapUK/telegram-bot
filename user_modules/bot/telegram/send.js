@@ -5,8 +5,9 @@ async function send(method, params) {
 
   // making http request
   const resp = await axios.post(url, params);
-  const data = JSON.parse(resp.data);
-  if (!data["ok"]) console.log(data);
+  /* const data = JSON.parse(resp.data);
+  if (!data["ok"]) console.log(data); */
+  console.log(resp.data);
 }
 
 module.exports = send;
