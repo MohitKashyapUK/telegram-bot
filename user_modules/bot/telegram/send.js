@@ -8,6 +8,7 @@ async function send(method, params) {
   /* const data = JSON.parse(resp.data);
   if (!data["ok"]) console.log(data); */
   console.log(resp.data);
+  console.log(typeof resp.data);
 }
 
 module.exports = send;
