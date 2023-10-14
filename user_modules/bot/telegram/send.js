@@ -10,4 +10,4 @@ function send(method, params) {
   });
 }
 
-export default send;
+module.exports = send;

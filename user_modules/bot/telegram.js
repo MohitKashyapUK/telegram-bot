@@ -14,4 +14,4 @@ function manager(req, res) {
   res.send("True");
 }
 
-export default manager;
+module.exports = manager;

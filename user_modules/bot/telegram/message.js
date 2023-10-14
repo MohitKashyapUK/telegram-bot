@@ -15,4 +15,4 @@ function Message(data) {
   send("sendMessage", params);
 }
 
-export default Message;
+module.exports = Message;

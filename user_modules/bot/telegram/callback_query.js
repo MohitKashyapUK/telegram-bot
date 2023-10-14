@@ -5,4 +5,4 @@ function CallbackQuery(req, res) {
   };
 }
 
-export default CallbackQuery;
+module.exports = CallbackQuery;
