@@ -1,11 +1,11 @@
 async function send(method, params) {
-  const axios = require("axios"),
-  TOKEN = process.env.bot_token,
-  url = `https://api.telegram.org/bot${TOKEN}/${method}`,
-  
+  const axios = require("axios");
+  const TOKEN = process.env.bot_token;
+  const url = `https://api.telegram.org/bot${TOKEN}/${method}`;
+
   // making http request
-  resp = await axios.post(url, params),
-  data = JSON.parse(resp.data);
+  const resp = await axios.post(url, params);
+  const data = JSON.parse(resp.data);
   if (!data["ok"]) console.log(data);
 }
 
