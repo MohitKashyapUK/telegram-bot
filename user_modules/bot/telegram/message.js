@@ -1,4 +1,4 @@
-function Message(data) {
+async function Message(data) {
   // function(s)
   const send = require("./send"),
   // variables
@@ -12,7 +12,7 @@ function Message(data) {
   };
   
   // sending response
-  send("sendMessage", params);
+  await send("sendMessage", params);
 }
 
 module.exports = Message;

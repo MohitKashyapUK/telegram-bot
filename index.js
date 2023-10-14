@@ -1,4 +1,4 @@
-// variables
+=// variables
 const express = require("express"),
 fs = require("node:fs"),
 app = express(),
@@ -13,7 +13,7 @@ app.get("/", (req, res) => {
   res.send("<h1>This is Home page!</h1>");
 });
 
-app.all("/bot/telegram", (req, res) => require(`${modules_path}/bot/telegram`)(req, res));
+app.all("/bot/telegram", async (req, res) => await require(`${modules_path}/bot/telegram`)(req, res));
 
 /* Start server */
 app.listen(port, () => {

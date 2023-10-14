@@ -1,4 +1,4 @@
-function manager(req, res) {
+async function manager(req, res) {
   const handlers_path = "./telegram/",
   data = req.body,
   keys = Object.keys(data),
@@ -10,7 +10,7 @@ function manager(req, res) {
     handler = null;
     console.log("This object is not available!");
   }
-  if (handler) handler(data);
+  if (handler) await handler(data);
   res.send("True");
 }
 
