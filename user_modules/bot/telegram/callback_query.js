@@ -14,6 +14,7 @@ async function CallbackQuery(req, res) {
   const params = { chat_id, message_id };
   
   if (data == "YT") {
+    params["text"] = "Select variety!";
     const reply_markup = {
       inline_keyboard: [
         [{ text: "Videos (no sound)", callback_data: "youtube_videos_without_sound" }, { text: "Videos (with sound)", callback_data: "youtube_videos_with_sound" }],
